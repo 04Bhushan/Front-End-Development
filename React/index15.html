@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draaggble Notes</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-draggable@4.3.1/build/web/react-draggable.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 15px;
+        }
+        .note{
+            width: 250px;
+            height: 150px;
+            background-color: yellow;
+            padding: 15px;
+            border: 1px solid orange;
+            box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.2);
+            position: absolute;
+        }
+        textarea{
+            width: 240px;
+            height: 120px;
+        }
+        .board{
+            background-color: #bfd8d8;
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+
+    class Note extends React.Component {
+
+        constructor(props){
+            super(props)
+            this.state = {
+                editing:false  //by defalut
+            }
+        }
+
+        componentwillMount = () => {
+            this.style = {
+                right: this.randomBetween(0, window.innerWidth - 150, 'px'),
+                top: this.randomBetween(0, window.innerHeight - 150, 'px')
+            }
+        }
+
+        randomBetween = ( x, y, s) => {
+            return( x + Math.ceil(Math.random() * (y-x))) + s
+
+        }
+
+        edit = () => {
+            this.setState({editing:true})
+            
+        }
+
+        save = () =>{
+            //var val= this.refs.newText.value
+            //alert("The value will be stored as: "+ val)
+            //this.setState({editing:false})
+            this.props.onChange(this.refs.newText.value, this.props.id)
+            this.setState({editing:false})
+        }
+
+        delete = (id)=> {
+            //alert('Deleting')
+            this.props.onRemove(this.props.id)
+        }
+
+        renderForm = () => {
+            return(
+                <div className="note" style={this.style}>
+                    <textarea ref="newText"></textarea>
+                    <button onClick={this.save}>Save</button>
+                </div>
+            )    
+        }
+
+        renderDisplay = () =>{
+            return(
+                <div className="note" style={this.style}>
+                    <p>{this.props.children}</p>
+                    <span>
+                        <button onClick={this.edit} >Edit</button> 
+                        <button onClick={this.delete} >X</button>
+                    </span>
+                </div>
+            )
+        }
+
+        render(){
+
+            return(
+                <ReactDraggable>{
+                (this.state.editing) ? this.renderForm() : this.renderDisplay()
+                }</ReactDraggable>
+            )
+               
+
+        }
+    }
+    
+    ReactDOM.render(<Note>Hello World!</Note>, document.getElementById('react-container'))
+    //array
+    class Board extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={
+                notes:[]
+            }
+        }
+
+        newId = () => {
+                this.uniqueId = this.uniqueId || 0
+                return this.uniqueId++
+        }
+
+        add = (text) => {
+            var notes =[
+                ...this.state.notes,//spread operator
+                {
+                    id:this.newId(),
+                    note:text
+                }
+            ]
+            this.setState({notes})
+        }
+
+        update = (newText, id) => {
+            var notes = this.state.notes.map(
+                note=>(note.id!==id)?
+                note:{
+                    ...note,//spread operator
+                    note:newText
+                }
+            )
+            this.setState({notes})
+        }
+
+        remove = (id) => {
+            var notes=this.state.notes.filter(note=>note.id!==id)
+            this.setState({notes})
+        }
+
+        eachNote = (note)=>{
+            return (<Note key={note.id}
+                      id={note.id} 
+                      onChange={this.update}
+                      onRemove={this.remove}>{note.note}</Note>) //for specifying a single node
+        }
+//calling & mapping in div, inside map function ES6 function with 2 args note & i(means by default i(1) note is present then no. of notes  increases) called with returning number of notes
+  
+        render(){
+            return(
+                <div className="Board">
+                    {this.state.notes.map(this.eachNote)}
+                    <button onClick={()=>this.add()}>Add Note</button> 
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render(<Board count={10} />, document.getElementById('react-container'))
+
+    </script>
+    
+</body>
+</html>

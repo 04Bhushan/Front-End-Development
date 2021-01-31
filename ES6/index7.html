@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function in Js ES6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" >
+        var developerList = (developers)=> console.log(developers);
+
+        console.log( ["John", "Riaan", "Daisy"] );
+
+        var person = {
+            first:"John",
+            Actions: [ "Bike","Travelling","Hike","Dance","Ski"],
+            //printAction: function(){
+                //var _this = this ;
+                //this.Actions.forEach(function(action){
+                    //var str = _this.first + " likes to " + action;
+                    //console.log(str);
+                //});
+            //}
+                    //using bind method
+            //printAction: function(){
+                //this.Actions.forEach(function(action){
+                    //var str = this.first + " likes to " + action;
+                    //console.log(str);
+                //}.bind(this));
+            //}
+
+            //using arrow method
+
+            printAction(){
+                this.Actions.forEach(action => {
+                    var str = this.first + " likes to " + action;
+                    console.log(str);
+                });
+            }
+            //try all three methods
+        }
+
+        person.printAction();
+    </script>
+</head>
+<body>
+    <h1>Arrow Function With "This Scope"</h1>
+</body>
+</html>

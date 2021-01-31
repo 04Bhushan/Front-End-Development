@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes & Inheritance in javascript ES6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" >
+        class mobiles{
+            constructor(storage,ram){
+                this.storage = storage;
+                this.ram = ram;
+            }
+
+            phoneDetails(){
+                console.log(`This phone has ${this.storage} Storage and ${this.ram} Ram.`);
+            }
+        }
+            // oldPhonee is a child class of mobiles
+        class oldPhonee extends mobiles{
+            constructor(){
+                super("4GB", "2GB") //new function
+            }
+        }
+
+        var myNewPhone = new mobiles("64GB","8GB");
+        myNewPhone.phoneDetails();
+
+        var myOldPhone = new oldPhonee();
+        myOldPhone.phoneDetails();
+    </script>
+</head>
+<body>
+    <h1>Classes & Inheritance in Javascript ES6</h1>
+</body>
+</html>

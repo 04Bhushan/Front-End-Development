@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring In JavaScript</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" >
+
+        var [first, , third] = ["Banglore", "Mysore", "Maharashtra"]; //here second index value is empty
+
+        console.log(first,third);
+
+        var shop = {
+            title : "Ice-cream Parlour",
+            price: 40,
+            description: "With every 1kg ice-cream 10rs 20g vanilla ice-cream free",
+            incredients: ["Sugar", "Sticks", "Softy"]
+        };
+
+        console.log(shop.title);
+        console.log(shop.price);
+        //method 2
+        var {description, incredients} = {
+            title : "Ice-cream Parlour",
+            price: 40,
+            description: "With every 1kg ice-cream 10rs 20g vanilla ice-cream free",
+            incredients: ["Sugar", "Sticks", "Softy"]
+        };
+
+        console.log(description);
+        console.log(incredients);
+
+        var vacation={
+            destination:"Ukraine",
+            travellers: 1,
+            activity: "Dancing on the Beach",
+            Amount:1000
+        }
+
+        function UkraineVacation({destination,activity}) {
+            return `let's got to ${destination} for ${activity}`;
+        }
+        console.log(UkraineVacation(vacation));
+    </script>
+</head>
+<body>
+    <h1>Destructuring In JavaScript ES6</h1>
+</body>
+</html>

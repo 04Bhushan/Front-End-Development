@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revising all 3 types of styles</title>
+    <style>
+        div{
+            background-color: crimson;
+            width: 600px;
+            font-family: sans-serif;
+            padding: 15px;
+        }
+        h1,p{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!--inline CSS-->
+ <!--
+    <div style="width: 600px; background-color: cadetblue; font-family: Arial, Helvetica, sans-serif;">
+        <h1 style="color: cornsilk;">Welcome To CSS World!</h1>
+        <p style="color: cornsilk;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias eos fuga enim facilis nulla exercitationem debitis placeat ea consequatur voluptatum. Enim quam dolore amet exercitationem! Earum saepe et accusantium eligendi.</p>
+    </div>
+ -->
+    <!--internal CSS-->
+    <div>
+        <h1>Welcome To CSS World!</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias eos fuga enim facilis nulla exercitationem debitis placeat ea consequatur voluptatum. Enim quam dolore amet exercitationem! Earum saepe et accusantium eligendi.</p>
+    </div>
+    <!--External CSS-->
+    <link rel="stylesheet" href="">
+    <p>In extrnal CSS we have to add a file with .css extension & give it's path in head section using link tag & write same code as we had written for internal CSS.</p>
+</body>
+</html>

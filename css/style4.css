@@ -1,0 +1,17 @@
+.box-element{
+    max-width: 1000px;/*fix the size of text depenidng on device width*/
+    height: auto;
+    background-color: teal;
+    padding: 25px;
+    font-family: sans-serif;
+    color: white;
+    margin: auto;/*alings box to center*/
+}
+
+/*changing BG at some point*/
+
+@media (max-width:500px){
+    .box-element{
+        background-color: orange;
+    }
+}

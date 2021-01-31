@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Template Strings</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" >
+        //function printMyname(firstname)
+        //{
+            //console.log(`Welcome ${firstname}!`);
+        //}
+        //printMyname(" Bhushan ");
+        
+        function SendEmail(firstname,purchasePrice)
+        {
+            var shipping=50;
+            console.log(`Hi! ${firstname} Thank You for buying from us.
+                                    Total:$${purchasePrice}
+                                    Shipping:$${shipping}
+                                    Total:$${shipping + purchasePrice } `);
+        }
+        SendEmail(" Bhushan ", 690);
+    </script>
+</head>
+<body>
+    <h1>Displaying Msgs as Template</h1>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 keywords</title>
+    <style>
+        section > div{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: red;
+            float: left;
+            cursor: pointer;  
+          }
+    </style>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" >
+      //var x=24;
+      //if(x)
+      //{
+        //  let x=76; //let doesn't updates the value of x
+      //}
+      //console.log(x);
+
+      for(let i=0;i<45;i++){ //if we define i as var then it will not update value of i when the loop terminates
+            var div = document.createElement('div');
+            div.onclick = function()
+            {
+                alert('You CLicked on the bloack!'+ i);
+            }
+            document.getElementsByTagName('section')[0].appendChild(div);
+      }
+    </script>
+</head>
+<body>
+    <header><h1>javascript ES6 keywords: var, let, const</h1></header>
+    <section>
+
+    </section>
+</body>
+</html>

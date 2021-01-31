@@ -1,0 +1,10 @@
+div{
+    margin: 25px;
+    padding: 15px;
+    border: 2px solid orange;
+    background-color: orchid;
+    color: whitesmoke;
+    font-family: sans-serif;
+    width: 450px;
+    height: auto;
+}

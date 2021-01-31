@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS--> 
+    <!-- CDN:Content Delivery Network, integrity means this is  a file which is unmodified/raw -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Working with grids!</title>
+  </head>
+  <body>
+
+    <!--As we are using Bootstrap So everything which we create is Responsive for every devices!-->
+    <!--If we want set the layout of different devices manunually then must watch index2.html -->
+
+
+    <div class="container">
+        <!--row1-->
+        <div class="row">
+            <div class="col">
+                <div class="box">
+
+                </div>
+            </div>
+            <!--dividing container parallel to x-axis into columns-->
+            <div class="col">
+                <div class="box">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="box">
+
+                </div>
+            </div>
+        </div>
+        <!--row2-->
+        <!--for generating multiple cols at a time type "div.col*4" -->
+        <!--in 2nd row 4 columns will form-->
+        <div class="row">
+            <div class="col">
+                <div class="box">
+
+                </div></div>
+            <div class="col">
+                <div class="box">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="box">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="box">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Something New!</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestiae!</p>
+            </div>
+            <!--for displaying text in cols-->
+            <div class="col">
+                <h2>Something New!</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestiae!</p>
+            </div>
+            <div class="col">
+                <h2>Something New!</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestiae!</p>
+            </div> <div class="col">
+                <h2>Something New!</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestiae!</p>
+            </div>
+            <div class="col">
+                <h2>Something New!</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestiae!</p>
+            </div>
+        </div>
+    </div>
+
+    <!--working with grids part-2-->
+    <!--Grid system is divided into 12columns so to divide that box into 75%|25% ie 3:1 we will do 8:4-->
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="box1">
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box1">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="box1">
+
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="box1">
+
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="box1">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+    <!-- Popper.js is used so that additional features of bootstrap must work fine-->
+    <!-- Option 2: Separate Popper.js and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

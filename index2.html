@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form method="POST">
+        <p>There are 3 types of form contact, login & registration form.</p>
+        <!--name attribute redirects our page to f_name-->
+        <input type="text" name="f_name"><br>
+        <input type="password" name="password">
+        <input type="submit">
+        <h3>Don't forget to add "required" attribute in the all the input fields it is very useful for validation & form filling.</h3>
+        <p>After submitting our name & password is visible in address bar which is not good for the webpage so to hide that we will use POST method.</p>
+    </form><hr>
+    <h1>Contact Form</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="c_name" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="c_email" required></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="tel" name="c_tel" required></td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td><input type="text" name="c_sub" required></td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td>
+                    <textarea name="c_mes" id="" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="c_send" value="Send Message"></td>
+            </tr>
+        </table>
+    </form><hr>
+    <h1>Login Form</h1>
+    <form method="POST">
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="u_name" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="u_pass" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="u_login" value="Login To Continue"></td>
+            </tr>
+        </table>
+    </form><hr>
+    <h1>Registration Form</h1>
+    <form method="POST">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="r_name" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="r_email" required></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="tel" name="r_tel" required></td>
+            </tr>
+            <tr>
+                <td>DOB:</td>
+                <td><input type="date" name="r_dob" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="r_gender" value="Male">Male <br>
+                    <input type="radio" name="r_gender" value="Female">Female <br>
+                    <input type="radio" name="r_gender" value="Other">Other <br>
+                </td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td>
+                    <select name="r_country" required>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                    </select>    
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="r_register" value="Register"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,127 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS--> 
+    <!-- CDN:Content Delivery Network, integrity means this is  a file which is unmodified/raw -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>List grps & Modals</title>
+  </head>
+  <body>
+
+    <!--list grps-->
+    <div class="container">
+        <div class="row justify-content-center">
+            
+            <div class="col-lg-6 mt-5">
+                <h3>List grps </h3>
+                <ul class="list-group">
+                    <li class="list-group-item active">Cras justo odio</li>
+                    <li class="list-group-item list-group-item-secondary">Dapibus ac facilisis in</li>
+                    <li class="list-group-item list-group-item-info">Morbi leo risus</li>
+                    <li class="list-group-item list-group-item-primary">Porta ac consectetur ac</li>
+                    <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            
+            <div class="col-lg-6 mt-5">
+                <h3>List grps with Cards</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Card Title</h4>
+                        <p class="card-text">For removing borders of list-grp we used "list-group-flush" class here</p>
+                    </div>
+                   
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">One</li>
+                        <li class="list-group-item">Two</li>
+                        <li class="list-group-item">Three</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modals-->
+  
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 mt-5">
+                <h4>Modals</h4>
+                                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Account
+                </button>
+                <p>Checkout this variants of Modals</p>
+                <a href="https://getbootstrap.com/docs/4.0/components/modal/" class="btn btn-info">Read More</a>       
+    
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Username">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="pswd">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="submit" class="btn btn-success" value="Login as Admin">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+    <!-- Popper.js is used so that additional features of bootstrap must work fine-->
+    <!-- Option 2: Separate Popper.js and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

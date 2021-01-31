@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default function Parameter in ES6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" >
+        //function whatTODo(Work,hours){ //older way
+          //  console.log("I need to work on" + Work + " for "+ hours + " hours: ");
+        //}
+        //whatTODo("HTML",3);
+            //new way in ES6
+        function whatTODo(Work="HTML",hours=3){
+            console.log(`I need to work on ${Work} for ${hours} hours.`);
+        }
+        whatTODo("JavaScript", 5);
+
+        //object literals
+
+        var sounds = {
+            //alarm: function(times){
+                //console.log(Array(times+1).join("Beep")); //as array index starts from 0
+            //},
+            //ringTone: function(times){
+                //console.log(Array(times+1).join("Song")); //as array index starts from 0
+            //}
+
+            //another way
+            alarm(times){
+                console.log("Beep".repeat(times)); //as array index starts from 0
+            },
+            ringTone(times){
+                console.log("Song".repeat(times)); //as array index starts from 0
+            }
+        }
+
+        console.log(sounds.alarm(3));
+        console.log(sounds.ringTone(4));
+    </script>
+</head>
+<body>
+    <h1>Default function Parameter & working with object literals in ES6</h1>
+</body>
+</html>

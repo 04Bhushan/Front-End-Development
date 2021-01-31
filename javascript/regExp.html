@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <h2>Welcome to Javascript Regular Expression</h2>
+
+    <script>
+        //create Regular Expression
+        var myReEx = /hello/;
+        // or var myReEx = new RegExp("hello");
+
+        var mystring = "Does this sentence have a hello in it pr not?";
+
+        if (myReEx.test(mystring))
+        {
+            alert('Yes');
+        }else{
+            alert('NO');
+        }
+
+        var myReEx = /^hello/; //hello should appears in the beiginning
+        var myReEx = /hello$/; //hello should appears in the end
+        var myReEx = /hel+o/; //"hello", "hello", "helllllo"
+        var myReEx = /hel*o/; // zero or more times
+        var myReEx = /hel?o/; // zero or one
+        var myReEx = /hello|goodbye/; //either|or
+        var myReEx = /he..o/; //any character
+        var myReEx = /\wello/; // \w alphanumeric or ..
+        var myReEx = /\bhello/; // \b word doundy after new line
+        var myReEx = /[crnld]hello/; // [...] range of characters
+
+    </script>
+</body>
+</html>

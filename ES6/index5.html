@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread operator in Javascript</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" >
+       var mobiles = ["oppo", "Vivo" ,"Redme" ,"Realme"];
+       var homeAppliances = ["Fridge", "Washing Machine", "AC", "TV", "Heater"];
+
+       //var formalElectronics = ["Mobiles" , "Laptop",mobiles,homeAppliances, "Watch", "Tablet"];//list is showned in as nested array
+       var formalElectronics = ["Mobiles" , "Laptop",...mobiles,...homeAppliances, "Watch", "Tablet"];//list is showned in a single array
+
+
+       console.log(formalElectronics);
+    </script>
+</head>
+<body>
+    <h1>Spread operator working.</h1>
+</body>
+</html>
